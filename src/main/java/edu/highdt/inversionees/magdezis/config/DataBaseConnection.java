@@ -1,5 +1,5 @@
 
-package edu.highdt.inversionees.magdezis.config;
+package main.java.edu.highdt.inversionees.magdezis.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,10 +9,9 @@ public class DataBaseConnection {
     
     public static Connection getConnection() throws SQLException {
         return DriverManager.getConnection(
-        Credentials.URL,
-        Credentials.USER,
-        Credentials.PASSWORD
-                
+            Credentials.URL,
+            Credentials.USER,
+            Credentials.PASSWORD
         );
     }
     

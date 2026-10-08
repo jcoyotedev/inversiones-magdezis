@@ -1,5 +1,5 @@
 
-package edu.highdt.inversionees.magdezis;
+package main.java.edu.highdt.inversionees.magdezis;
 
 import java.net.URL;
 import javafx.application.Application;
@@ -13,7 +13,7 @@ public class App extends Application {
    
 @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/main/java/edu/highdt/inversionees/magdezis/resources/view/login.fxml"));
         stage.setTitle("Control de Inventario - Login");
         stage.setScene(new Scene(root));
         stage.show();

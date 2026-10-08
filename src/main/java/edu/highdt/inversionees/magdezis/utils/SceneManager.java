@@ -1,5 +1,5 @@
 
-package edu.highdt.inversionees.magdezis.utils;
+package main.java.edu.highdt.inversionees.magdezis.utils;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,13 +14,8 @@ public class SceneManager {
     
     public static void setScene(ActionEvent event, String fxmlFile, String title) {
         try {
-            URL fxmlLocation = Thread.currentThread().getContextClassLoader().getResource("resources/view/" + fxmlFile);
-
-            if (fxmlLocation == null) {
-                fxmlLocation = Thread.currentThread().getContextClassLoader().getResource("view/" + fxmlFile);
-            }
-
-            Parent root = FXMLLoader.load(fxmlLocation);
+          
+            Parent root = FXMLLoader.load(SceneManager.class.getResource("/main/java/edu/highdt/inversionees/magdezis/resources/view/" + fxmlFile));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setTitle(title);
             stage.setScene(new Scene(root));
